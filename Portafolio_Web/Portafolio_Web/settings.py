@@ -54,7 +54,8 @@ ROOT_URLCONF = 'Portafolio_Web.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['C:\Users\felip\Desktop\Codigo\Portafolio_Web Felipe Calvo\Portafolio_Web\Plataforma\template',
+                 'C:\Users\felip\Desktop\Codigo\Portafolio_Web Felipe Calvo\Portafolio_Web\Landing\templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
