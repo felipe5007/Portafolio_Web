@@ -4,6 +4,7 @@ from django import forms
 
 class Usuario(models.Model):
     nombre = models.CharField(max_length=200)
+    correo
     
     
     def __str__(self):
@@ -12,6 +13,9 @@ class Usuario(models.Model):
     
 class Servicios(models.Model):
     servicio = models.CharField(max_length=100)
+    fechaSolicitud = models.DateField()
+    fechaEntrega = models.DateField()
+    entregado = models.BooleanField()
     
     def __str__(self):
         return f"{self.servicio}"
@@ -19,6 +23,7 @@ class Servicios(models.Model):
 
 class Proyecto(models.Model):
     proyecto = models.CharField(max_length=50)
+    origen = models.CharField(max_length=100)
     def __str__(self):
         return f"{self.proyecto}"
     
@@ -27,4 +32,4 @@ class Proyecto_Card(models.Model):
     proyecto = Proyecto.proyecto
     def __str__(self):
         return f"{self.proyecto}"
-    
+

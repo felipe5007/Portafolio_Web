@@ -9,6 +9,9 @@ def llamar_plantilla(request):
     apellido = "ovlac"
     diccionario = {"nombre": nombre,"apellido": apellido}
     plantilla = loader.get_template('test.html')
-    miContexto = Context(diccionario)
-    respuesta = plantilla.render(miContexto)
+    respuesta = plantilla.render(diccionario)
     return HttpResponse(respuesta)
+
+
+def sobremi(request):
+    return render(request, "sobremi.html")

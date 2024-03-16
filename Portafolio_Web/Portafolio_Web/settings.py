@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # Apps del portafolio
+    'Portafolio_Web',
+    'Landing',
 ]
 
 MIDDLEWARE = [
@@ -54,8 +58,7 @@ ROOT_URLCONF = 'Portafolio_Web.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:\Users\felip\Desktop\Codigo\Portafolio_Web Felipe Calvo\Portafolio_Web\Plataforma\template',
-                 'C:\Users\felip\Desktop\Codigo\Portafolio_Web Felipe Calvo\Portafolio_Web\Landing\templates',],
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
