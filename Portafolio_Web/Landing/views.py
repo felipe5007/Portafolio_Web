@@ -13,5 +13,11 @@ def llamar_plantilla(request):
     return HttpResponse(respuesta)
 
 
+def landing(request):
+    plantilla = loader.get_template('index.html')
+    respuesta = plantilla.render()
+    return HttpResponse(respuesta)
+
+
 def sobremi(request):
     return render(request, "sobremi.html")

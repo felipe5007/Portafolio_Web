@@ -4,9 +4,7 @@ from django import forms
 
 class Usuario(models.Model):
     nombre = models.CharField(max_length=200)
-    correo
-    
-    
+    correo = models.CharField(max_length=200)
     def __str__(self):
         return f"{self.nombre}"
     
